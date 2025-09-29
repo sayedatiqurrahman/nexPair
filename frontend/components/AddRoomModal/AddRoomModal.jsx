@@ -2,7 +2,6 @@ import  { useState } from 'react';
 import styles from './AddRoomModal.module.css';
 import TextInput from '../shared/TextInput/TextInput';
 import { createRoom as create } from '../../http';
-import { useHistory } from 'react-router-dom';
 import { AiOutlineClose } from 'react-icons/ai';
 import { BsGlobe, BsFillLockFill } from 'react-icons/bs';
 import { FaUsers } from 'react-icons/fa';

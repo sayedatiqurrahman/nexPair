@@ -1,12 +1,13 @@
 import styles from './Home.module.css';
-import {  useHistory } from 'react-router-dom';
+
 import Card from '../../components/shared/Card/Card';
 import Button from '../../components/shared/Button/Button';
+import { useRouter } from 'next/router';
 
 const Home = () => {
-    const history = useHistory();
+    const router = useRouter();
     function startRegister() {
-        history.push('/authenticate');
+        router.push('/authenticate');
     }
     return (
         <div className={styles.cardWrapper}>

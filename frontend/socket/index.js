@@ -1,14 +1,15 @@
 import { io } from 'socket.io-client';
 
-const socketInit = () => {
-    const options = {
+const socketInit =()=>{
+
+    const options  = {
         'force new connection': true,
-        reconnectionAttempts: 'Infinity',
+        reconnectionAttempt:"infinity",
         timeout: 10000,
-        transports: ['websocket'],
-    };
+        transports: ['webSocket']
+    }
+    
+    return io(process.env.NEXT_PUBLIC_BACKEND_API , options)
+}
 
-    return io(process.env.SOCKET_SERVER_URL, options);
-};
-
-export default socketInit;
+export default socketInit

@@ -19,7 +19,7 @@ const Room = () => {
     const { id: roomId } = router.query;
     const [room, setRoom] = useState(null);
 
-    const { clients } = useWebRTC(roomId, user);
+    const { clients, provideRef } = useWebRTC(roomId, user);
    
     console.log(clients)
     const handleMute = (isMuted, id)=> isMuted
@@ -91,9 +91,7 @@ const Room = () => {
                                     <audio
                                         autoPlay
                                         playsInline
-                                        // ref={(instance) => {
-                                        //     provideRef(instance, client.id);
-                                        // }}
+                                        ref={(instance)=> provideRef(instance, client.id)}
                                     />
                                     <button
                                         onClick={() =>
