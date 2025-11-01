@@ -45,9 +45,7 @@ const Rooms = () => {
                 </div>
 
                 <div className={styles.roomList}>
-                    {rooms.map((room) => (
-                        <RoomCard key={room.id} room={room} />
-                    ))}
+                    {rooms.map((room) =>  <RoomCard key={room.id} room={room} />)}
                 </div>
             </div>
             {showModal && <AddRoomModal onClose={() => setShowModal(false)} />}

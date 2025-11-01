@@ -6,7 +6,7 @@ export default  async function authMiddleware (req,res,next){
             const {accessToken} = req.cookies
 
             if(!accessToken) throw new Error("Invalid token")
-            console.log("accessToken", accessToken)
+            // console.log("accessToken", accessToken)
 
 
             const userData = await tokenService.verifyAccessToken(accessToken)

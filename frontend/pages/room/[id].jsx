@@ -78,9 +78,7 @@ const Room = () => {
               
                 
                 <div className={styles.clientsList}>
-                    {clients?.map((client) => {
-                        return (
-                            <div className={styles.client} key={client.id}>
+                    {clients?.map((client, idx) =>  <div className={styles.client} key={idx + client.id}>
     
                                 <div className={styles.userHead}>
                                     <img
@@ -108,8 +106,8 @@ const Room = () => {
                                 </div>
                                 <h4>{client.name}</h4>
                             </div>
-                        );
-                    })}
+                       
+                    )}
                 </div>
             </div>
         </div>
